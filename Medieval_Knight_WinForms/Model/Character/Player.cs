@@ -5,24 +5,28 @@ using Medieval_Knight_WinForms.Model.Stats;
 using System;
 namespace Medieval_Knight_WinForms.Model.Character
 {
-    class Player : AbstractCombatant
+    class Player : AbstractCombatant, ICombatant
     {
-        public static Player Hero { get; private set; }
-
-        private Player(string playerName, ICombatantInventory inventory, ICombatantPuppet puppet, ICombatantStats stats) : base(playerName, inventory, puppet, stats)
+        /*При разработке использовал Синглтон, но позже решил что фабрика будет лучше*/
+        public Player(string name, ICombatantInventory inventory, ICombatantPuppet puppet, ICombatantStats stats) : base(name, inventory, puppet, stats)
         {
         }
+        //public static Player Hero { get; private set; }
 
-        public static Player GetPlayer(string playerName, ICombatantInventory inventory, ICombatantPuppet puppet, ICombatantStats stats)
-        {
-            if (Hero == null)
-            {
-                Hero = new Player(playerName, inventory, puppet, stats);
-                Hero.Inventory.AddItem(new StandartWeapon("Sword", 10, 10, 15), new StandartWeapon("Great Sword", 25, 25, 25), new StandartWeapon("Short Sword", 15, 15, 40));
-                Hero.Inventory.AddGold(5000);
-            }
-            return Hero;
-        }
+        //private Player(string playerName, ICombatantInventory inventory, ICombatantPuppet puppet, ICombatantStats stats) : base(playerName, inventory, puppet, stats)
+        //{
+        //}
+
+        //public static Player GetPlayer(string playerName, ICombatantInventory inventory, ICombatantPuppet puppet, ICombatantStats stats)
+        //{
+        //    if (Hero == null)
+        //    {
+        //        Hero = new Player(playerName, inventory, puppet, stats);
+        //        Hero.Inventory.AddItem(new StandartWeapon("Sword", 10, 10, 15), new StandartWeapon("Great Sword", 25, 25, 25), new StandartWeapon("Short Sword", 15, 15, 40));
+        //        Hero.Inventory.AddGold(5000);
+        //    }
+        //    return Hero;
+        //}
 
         public override void Attack(ICombatant attackTarget)
         {

@@ -9,11 +9,12 @@ namespace Medieval_Knight_WinForms.Model.Character
     {
         public ShopKeeper(string name) : base(name)
         {
+            SetDefaultShopInventory();
         }
 
         public ShopKeeper(string name, IInventory inventory) : base(name, inventory)
         {
-
+            SetDefaultShopInventory();
         }
 
         //public virtual event Action TradeComplete;
@@ -59,7 +60,7 @@ namespace Medieval_Knight_WinForms.Model.Character
             TradeComplete?.Invoke();
         }
 
-        public virtual void SetDefaultShopInventory()
+        private void SetDefaultShopInventory()
         {
             //*Переделать в фабрику!!!
             Inventory.AddGold(1000);

@@ -9,5 +9,16 @@
             ArmorChest,
             Jewelry
         }
+        public enum CharacterType
+        {
+            Player,
+            ShopKeeper,
+            Enemy
+        }
+        public enum CombatantType
+        {
+            Player,
+            Enemy
+        }
     }
 }

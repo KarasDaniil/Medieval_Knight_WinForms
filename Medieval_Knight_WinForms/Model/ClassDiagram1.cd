@@ -11,6 +11,16 @@
           <NewMemberFileName>Model\Enum\Specification.cs</NewMemberFileName>
         </TypeIdentifier>
       </Enum>
+      <Enum Name="Medieval_Knight_WinForms.Model.Enum.Specification.CharacterType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Enum\Specification.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Medieval_Knight_WinForms.Model.Enum.Specification.CombatantType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Enum\Specification.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
     </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -153,13 +163,15 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAQAAAAAAAA=</HashCode>
       <FileName>Model\Character\Enemy.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Character.Player" Collapsed="true">
     <Position X="11" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAABAAAEAAAAAAIAAAAAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAQAAAAAAAA=</HashCode>
       <FileName>Model\Character\Player.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Character.ShopKeeper" Collapsed="true">
     <Position X="15.5" Y="5.75" Width="1.5" />
@@ -171,7 +183,7 @@
   <Class Name="Medieval_Knight_WinForms.Model.GameContoller">
     <Position X="17.75" Y="2.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACACAIAABAAAAACCAAAIAEAAgAAAAAEQAIAAA=</HashCode>
+      <HashCode>AAAAAAACACAIAABAAAAACCAAAIAEAAgAAAACEQAIAAA=</HashCode>
       <FileName>Model\GameContoller.cs</FileName>
     </TypeIdentifier>
   </Class>

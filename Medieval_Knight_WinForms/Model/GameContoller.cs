@@ -1,8 +1,6 @@
 ﻿using Medieval_Knight_WinForms.Model.Character;
-using Medieval_Knight_WinForms.Model.Inventory;
-using Medieval_Knight_WinForms.Model.Puppet;
+using Medieval_Knight_WinForms.Model.Factories;
 using Medieval_Knight_WinForms.Model.Stats;
-using Medieval_Knight_WinForms.Model.Item;
 using System.Collections.Generic;
 using System.Linq;
 namespace Medieval_Knight_WinForms.Model
@@ -13,17 +11,18 @@ namespace Medieval_Knight_WinForms.Model
         private static List<INpc> _npcList;
         private static List<ICombatant> _combatantList;
 
+        private static ICombatantFactory _factory;
+
         static GameContoller()
         {
-            //выбрал такую инициализацию, так как я только здесь буду изменять старые типы на разработаные новые,
-            //и все будет работать штатно, и не нужно никуда в глубь лезть исправлять
-            var puppet = new CombatantPuppet(new StandartArmor("default", 1 , 0, Enum.Specification.ItemType.ArmorChest), new StandartArmor("default", 1, 0, Enum.Specification.ItemType.ArmorHead), 
-                new StandartWeapon("default", 1, 0, 0), new StandartJewelry("default", 1, 1, 1, 1, 1));
-            _player = Player.GetPlayer("Hero", new CombatantInventory(puppet), puppet, new CombatantStats(puppet));
-
             _npcList = new List<INpc>();
             _combatantList = new List<ICombatant>();
+            //выбрал фабрику, так как я только там буду изменять старые типы на разработаные новые,
+            //и все будет работать штатно, и не нужно никуда в глубь лезть исправлять
+            _factory = Factory.GetFactory(Enum.Specification.CombatantType.Player);
+            _player = (Player)_factory.GetCombatant("Hero", 1);
             _combatantList.Add(_player);
+
         }
 
         public static Player Player { get => _player; }
@@ -34,9 +33,9 @@ namespace Medieval_Knight_WinForms.Model
         public static void CreateShopKeeper(string shopName, DieDelegate eventHandlerDie)
         {
             //Создает нового торговца, если не существует торговца с таким же именем
-            if (!_npcList.Contains(_npcList.Find(npc => npc.Name == shopName))) {
+            if (!_npcList.Contains(_npcList.Find(npc => npc.Name == shopName)))
+            {
                 _npcList.Add(new ShopKeeper(shopName));
-                ((ShopKeeper)_npcList[^1]).SetDefaultShopInventory();
                 _npcList[^1].Died += eventHandlerDie;
             }
         }
@@ -46,14 +45,13 @@ namespace Medieval_Knight_WinForms.Model
             return _npcList.Find(npc => npc.Name == npcName);
         }
 
-        public static void CreateEnemy(string enemyName, DieDelegate eventHandlerDie)
+        public static void CreateEnemy(string enemyName, double powerMultipler, DieDelegate eventHandlerDie)
         {
             //Создает нового врага, если не существует врага с таким же именем
             if (!_combatantList.Contains(_combatantList.Find(enemy => enemy.Name == enemyName)))
             {
-                var enemyPuppet = new CombatantPuppet(new StandartArmor("default", 1, 0, Enum.Specification.ItemType.ArmorChest), new StandartArmor("default", 1, 0, Enum.Specification.ItemType.ArmorHead), 
-                    new StandartWeapon("default", 1, 0, 0), new StandartJewelry("default", 1, 1, 1, 1, 1));
-                _combatantList.Add(new Enemy(enemyName, new CombatantInventory(enemyPuppet), enemyPuppet, new CombatantStats(enemyPuppet)));
+                _factory = Factory.GetFactory(Enum.Specification.CombatantType.Enemy);
+                _combatantList.Add(_factory.GetCombatant(enemyName, powerMultipler));
                 _combatantList[^1].Died += eventHandlerDie;
             }
         }

@@ -60,7 +60,7 @@ namespace Medieval_Knight_WinForms.View
 
         private void Bt_AddEnemy_Click(object sender, EventArgs e)
         {
-            GameContoller.CreateEnemy(DateTime.Now.ToLongTimeString(), UpdateInfo);         
+            GameContoller.CreateEnemy(DateTime.Now.ToLongTimeString(), 2, UpdateInfo);         
             UpdateInfo();
         }
     }
