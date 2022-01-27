@@ -1,7 +1,7 @@
 ﻿using Medieval_Knight_WinForms.Model.Inventory;
 using Medieval_Knight_WinForms.Model.Puppet;
 using Medieval_Knight_WinForms.Model.Stats;
-
+using Medieval_Knight_WinForms.Model.Item;
 namespace Medieval_Knight_WinForms.Model.Character
 {
     abstract class AbstractCombatant : Character, ICombatant
@@ -14,13 +14,6 @@ namespace Medieval_Knight_WinForms.Model.Character
         public StatsChange EquipmentChange { get; set; }
         public StatsChange JewelSkillCasted { get; set; }
         public AttackComplete AttackComplete { get; set; }
-
-        protected AbstractCombatant(string name) : base(name)
-        {
-            Puppet = new CombatantPuppet();
-            Inventory = new CombatantInventory(Puppet);
-            Stats = new CombatantStats(Puppet);
-        }
 
         protected AbstractCombatant(string name, ICombatantInventory inventory, ICombatantPuppet puppet, ICombatantStats stats) : base(name, inventory)
         {          

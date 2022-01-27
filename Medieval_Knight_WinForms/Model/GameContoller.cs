@@ -2,6 +2,7 @@
 using Medieval_Knight_WinForms.Model.Inventory;
 using Medieval_Knight_WinForms.Model.Puppet;
 using Medieval_Knight_WinForms.Model.Stats;
+using Medieval_Knight_WinForms.Model.Item;
 using System.Collections.Generic;
 using System.Linq;
 namespace Medieval_Knight_WinForms.Model
@@ -16,8 +17,9 @@ namespace Medieval_Knight_WinForms.Model
         {
             //выбрал такую инициализацию, так как я только здесь буду изменять старые типы на разработаные новые,
             //и все будет работать штатно, и не нужно никуда в глубь лезть исправлять
-            var puppet = new CombatantPuppet();
+            var puppet = new CombatantPuppet(new StandartArmor("default", 1 , 0, Enum.Specification.ItemType.ArmorChest), new StandartArmor("default", 1, 0, Enum.Specification.ItemType.ArmorHead), new StandartWeapon("default", 1, 0, 0), new StandartJewelry("default", 1, 1, 1, 1, 1));
             _player = Player.GetPlayer("Hero", new CombatantInventory(puppet), puppet, new CombatantStats(puppet));
+
             _npcList = new List<INpc>();
             _combatantList = new List<ICombatant>();
             _combatantList.Add(_player);
@@ -50,7 +52,7 @@ namespace Medieval_Knight_WinForms.Model
             //Создает нового врага, если не существует врага с таким же именем
             if (!_combatantList.Contains(_combatantList.Find(enemy => enemy.Name == enemyName)))
             {
-                var enemyPuppet = new CombatantPuppet();
+                var enemyPuppet = new CombatantPuppet(new StandartArmor("default", 1, 0, Enum.Specification.ItemType.ArmorChest), new StandartArmor("default", 1, 0, Enum.Specification.ItemType.ArmorHead), new StandartWeapon("default", 1, 0, 0), new StandartJewelry("default", 1, 1, 1, 1, 1));
                 _combatantList.Add(new Enemy(enemyName, new CombatantInventory(enemyPuppet), enemyPuppet, new CombatantStats(enemyPuppet)));
                 _combatantList[^1].Died += eventHandlerDie;
             }

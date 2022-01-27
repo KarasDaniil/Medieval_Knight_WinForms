@@ -113,37 +113,20 @@ namespace Medieval_Knight_WinForms.Model.Stats
             _damageItemBonus = 0;
         }
 
-        public virtual void LevelUpStats(int maxHpLevelBonus, int attackLevelBonus, int defenceLevelBonus, int damageLevelBonus)
-        {
-            _maxHpLevelBonus += maxHpLevelBonus;
-            _attackLevelBonus += attackLevelBonus;
-            _defenceLevelBonus += defenceLevelBonus;
-            _damageLevelBonus += damageLevelBonus;
-        }
-
-        public virtual void ResetLevelsStats()
-        {
-            _maxHpLevelBonus = 0;
-            _attackLevelBonus = 0;
-            _defenceLevelBonus = 0;
-            _damageLevelBonus = 0;
-        }
-
         public virtual void UpdateItemsStats()
         {
-            _attackItemBonus = AttachedPuppet.Weapon == null ? 0 : AttachedPuppet.Weapon.WeaponAtack;
-            _damageItemBonus = AttachedPuppet.Weapon == null ? 0 : AttachedPuppet.Weapon.WeaponDamage;
+            _attackItemBonus = AttachedPuppet.Weapon.WeaponAtack;
+            _damageItemBonus = AttachedPuppet.Weapon.WeaponDamage;
 
-            _defenceItemBonus = (AttachedPuppet.Chest == null ? 0 : AttachedPuppet.Chest.ArmorScore) + (AttachedPuppet.Head == null ? 0 : AttachedPuppet.Head.ArmorScore);
+            _defenceItemBonus = AttachedPuppet.Chest.ArmorScore + AttachedPuppet.Head.ArmorScore;
 
-            _maxHpJewelryMult = AttachedPuppet.Jewelry == null ? 1 : AttachedPuppet.Jewelry.MaxHpMult;
-            _attackJewelryMult = AttachedPuppet.Jewelry == null ? 1 : AttachedPuppet.Jewelry.MaxHpMult;
-            _defenceJewelryMult = AttachedPuppet.Jewelry == null ? 1 : AttachedPuppet.Jewelry.MaxHpMult;
-            _damageJewelryMult = AttachedPuppet.Jewelry == null ? 1 : AttachedPuppet.Jewelry.MaxHpMult;
+            _maxHpJewelryMult = AttachedPuppet.Jewelry.MaxHpMult;
+            _attackJewelryMult = AttachedPuppet.Jewelry.MaxHpMult;
+            _defenceJewelryMult = AttachedPuppet.Jewelry.MaxHpMult;
+            _damageJewelryMult = AttachedPuppet.Jewelry.MaxHpMult;
 
             if (MaxHP < CurrentHp)
                 CurrentHp = MaxHP;
-            //_damageItemBonus = AttachedPuppet.Weapon.WeaponDamage ?? 0; //== null ? 0 : AttachedPuppet.Weapon.WeaponDamage;
         }
     }
 }

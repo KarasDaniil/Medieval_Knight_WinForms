@@ -35,7 +35,7 @@ namespace Medieval_Knight_WinForms.Model.Inventory
 
         public void UnequipItem(int itemIndex)
         {
-            if (ItemsList.Contains(ItemsList.Find(item => item.ItemType == ItemsList[itemIndex].ItemType && !item.IsЕquipped)))
+            if (ItemsList.Contains(ItemsList.Find(item => item.ItemType == ItemsList[itemIndex].ItemType && item.IsЕquipped)))
             {
                 ItemsList[itemIndex].Unequip(_puppet);
             }

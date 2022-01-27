@@ -1,10 +1,9 @@
 ﻿using Medieval_Knight_WinForms.Model.Item;
 using Medieval_Knight_WinForms.Model.Stats;
-using Medieval_Knight_WinForms.Model.Character;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
-using System;
 namespace Medieval_Knight_WinForms.Model
 {
     static class MyDataGridViewExtension
@@ -17,11 +16,13 @@ namespace Medieval_Knight_WinForms.Model
                 bindingSource.DataSource = itemsList;
                 dataGridView.DataSource = bindingSource;
             }
-            try {
+            try
+            {
                 bindingSource.ResetBindings(true);
                 //dataGridView.Columns["IsЕquipped"].Visible = false;
             }
-            catch (Exception ex){
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
 
@@ -74,31 +75,36 @@ namespace Medieval_Knight_WinForms.Model
                 dataGridView.Rows[i].Cells["CombatantName"].Value = names[i];
                 tmpStr.Clear();
                 //формирование строки для описания подробностей характеристики
-                tmpStr.Append($"Value: {combatantStats[i].MaxHP}\nBase: {Convert.ToInt32(combatantStats[i].MaxHP / (combatantStats[i].AttachedPuppet.Jewelry == null ? 1 : combatantStats[i].AttachedPuppet.Jewelry.MaxHpMult))}" +
-                    $"\nJewel multipler: {(combatantStats[i].AttachedPuppet.Jewelry == null ? 1 : combatantStats[i].AttachedPuppet.Jewelry.MaxHpMult)}");
+                tmpStr.Append($"Value: {combatantStats[i].MaxHP}\nBase: {Convert.ToInt32(combatantStats[i].MaxHP / combatantStats[i].AttachedPuppet.Jewelry.MaxHpMult)}" +
+                    $"\nJewel Name: {combatantStats[i].AttachedPuppet.Jewelry.ItemName}" +
+                    $"\nJewel multipler: {combatantStats[i].AttachedPuppet.Jewelry.MaxHpMult}");
                 dataGridView.Rows[i].Cells["MaxHP"].ToolTipText = tmpStr.ToString();
                 tmpStr.Clear();
                 tmpStr.Append($"Value: {combatantStats[i].CurrentHp}");
                 dataGridView.Rows[i].Cells["CurrentHp"].ToolTipText = tmpStr.ToString();
                 tmpStr.Clear();
                 tmpStr.Append($"Value: {combatantStats[i].Attack}" +
-                    $"\nItem Bonus: {(combatantStats[i].AttachedPuppet.Weapon == null ? 0 : combatantStats[i].AttachedPuppet.Weapon.WeaponAtack)}" +
-                    $"\nJewel multipler: {(combatantStats[i].AttachedPuppet.Jewelry == null ? 1 : combatantStats[i].AttachedPuppet.Jewelry.AttackMult)}");
+                    $"\nItem Name: {combatantStats[i].AttachedPuppet.Weapon.ItemName}" +
+                    $"\nItem Bonus: {combatantStats[i].AttachedPuppet.Weapon.WeaponAtack}" +
+                    $"\nJewel multipler: {combatantStats[i].AttachedPuppet.Jewelry.AttackMult}");
                 dataGridView.Rows[i].Cells["Attack"].ToolTipText = tmpStr.ToString();
                 tmpStr.Clear();
                 tmpStr.Append($"Value: {combatantStats[i].Defence}" +
-                    $"\nItem Bonus: {(combatantStats[i].AttachedPuppet.Chest == null ? 0 : combatantStats[i].AttachedPuppet.Chest.ArmorScore) + (combatantStats[i].AttachedPuppet.Head == null ? 0 : combatantStats[i].AttachedPuppet.Head.ArmorScore)}" +
-                    $"\nJewel multipler: {(combatantStats[i].AttachedPuppet.Jewelry == null ? 1 : combatantStats[i].AttachedPuppet.Jewelry.DefenceMult)}");
+                    $"\nItems Names: {combatantStats[i].AttachedPuppet.Chest.ItemName}, {combatantStats[i].AttachedPuppet.Head.ItemName}" +
+                    $"\nItem Bonus: {combatantStats[i].AttachedPuppet.Chest.ArmorScore + combatantStats[i].AttachedPuppet.Head.ArmorScore}" +
+                    $"\nJewel multipler: {combatantStats[i].AttachedPuppet.Jewelry.DefenceMult}");
                 dataGridView.Rows[i].Cells["Defence"].ToolTipText = tmpStr.ToString();
                 tmpStr.Clear();
                 tmpStr.Append($"Value: {combatantStats[i].DamageMax}" +
-                    $"\nItem Bonus: {(combatantStats[i].AttachedPuppet.Weapon == null ? 0 : combatantStats[i].AttachedPuppet.Weapon.WeaponDamage)}" +
-                    $"\nJewel multipler: {(combatantStats[i].AttachedPuppet.Jewelry == null ? 1 : combatantStats[i].AttachedPuppet.Jewelry.DamageMult)}");
+                    $"\nItem Name: {combatantStats[i].AttachedPuppet.Weapon.ItemName}" +
+                    $"\nItem Bonus: {combatantStats[i].AttachedPuppet.Weapon.WeaponDamage}" +
+                    $"\nJewel multipler: {combatantStats[i].AttachedPuppet.Jewelry.DamageMult}");
                 dataGridView.Rows[i].Cells["DamageMin"].ToolTipText = tmpStr.ToString();
                 tmpStr.Clear();
                 tmpStr.Append($"Value: {combatantStats[i].DamageMin}" +
-                    $"\nItem Bonus: {(combatantStats[i].AttachedPuppet.Weapon == null ? 0 : combatantStats[i].AttachedPuppet.Weapon.WeaponDamage)}" +
-                    $"\nJewel multipler: {(combatantStats[i].AttachedPuppet.Jewelry == null ? 1 : combatantStats[i].AttachedPuppet.Jewelry.DamageMult)}");
+                    $"\nItem Name: {combatantStats[i].AttachedPuppet.Weapon.ItemName}" +
+                    $"\nItem Bonus: {combatantStats[i].AttachedPuppet.Weapon.WeaponDamage}" +
+                    $"\nJewel multipler: {combatantStats[i].AttachedPuppet.Jewelry.DamageMult}");
                 dataGridView.Rows[i].Cells["DamageMax"].ToolTipText = tmpStr.ToString();
             }
             dataGridView.Columns["AttachedPuppet"].Visible = false;
