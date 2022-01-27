@@ -87,7 +87,7 @@ namespace Medieval_Knight_WinForms.Model
             }
         }
 
-        public static void CastSkill(string attackerName, string defenderName)//Способность от Джевела
+        public static void CastSkill(string attackerName, string defenderName)//Способность от бижутерии
         {
             var attacker = _combatantList.Find(combatant => combatant.Name == attackerName);
             var defender = _combatantList.Find(combatant => combatant.Name == defenderName);
