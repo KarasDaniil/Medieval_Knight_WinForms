@@ -101,7 +101,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Inventory.CombatantInventory" Collapsed="true">
-    <Position X="10.5" Y="9.25" Width="1.5" />
+    <Position X="10" Y="9.25" Width="2" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEgAA=</HashCode>
       <FileName>Model\Inventory\CombatantInventory.cs</FileName>
@@ -184,7 +184,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Puppet.CombatantPuppet" Collapsed="true">
-    <Position X="2" Y="9.25" Width="1.5" />
+    <Position X="2" Y="9.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAEAQIAAAAAAgAAAAoAAAAgAAECAAQQgAAA=</HashCode>
       <FileName>Model\Puppet\CombatantPuppet.cs</FileName>
@@ -192,7 +192,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Stats.CombatantStats" Collapsed="true">
-    <Position X="4.25" Y="9.25" Width="1.5" />
+    <Position X="4.25" Y="9.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAggAAAAAAAQEQAIQgEUIQQLAAAgABAQAwEgAAAAA=</HashCode>
       <FileName>Model\Stats\CombatantStats.cs</FileName>
@@ -242,7 +242,7 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="Medieval_Knight_WinForms.Model.Inventory.ICombatantInventory" Collapsed="true">
-    <Position X="10.5" Y="8" Width="1.5" />
+    <Position X="10" Y="8" Width="2" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Model\Inventory\ICombatantInventory.cs</FileName>
@@ -284,14 +284,14 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="Medieval_Knight_WinForms.Model.Puppet.ICombatantPuppet" Collapsed="true">
-    <Position X="2" Y="8" Width="1.5" />
+    <Position X="2" Y="8" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQIAAAAAAAAAAAgAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Puppet\ICombatantPuppet.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Medieval_Knight_WinForms.Model.Stats.ICombatantStats" Collapsed="true">
-    <Position X="4.25" Y="8" Width="1.5" />
+    <Position X="4.25" Y="8" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAIAgEAIAQIAAAgAAAAAAAgAAAAA=</HashCode>
       <FileName>Model\Stats\ICombatantStats.cs</FileName>
