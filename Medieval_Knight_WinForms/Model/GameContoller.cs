@@ -7,8 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 namespace Medieval_Knight_WinForms.Model
 {
-    static class GameContoller//Класс служит прослойкой между UI и системой(игрой)
-    {                         //Благодаря етому UI имеет доступ только к минимально необходимому функционалу 
+    class GameContoller//Класс служит прослойкой между UI и системой(игрой)
+    {                  //Благодаря етому UI имеет доступ только к минимально необходимому функционалу 
         private static Player _player;
         private static List<INpc> _npcList;
         private static List<ICombatant> _combatantList;
@@ -17,7 +17,8 @@ namespace Medieval_Knight_WinForms.Model
         {
             //выбрал такую инициализацию, так как я только здесь буду изменять старые типы на разработаные новые,
             //и все будет работать штатно, и не нужно никуда в глубь лезть исправлять
-            var puppet = new CombatantPuppet(new StandartArmor("default", 1 , 0, Enum.Specification.ItemType.ArmorChest), new StandartArmor("default", 1, 0, Enum.Specification.ItemType.ArmorHead), new StandartWeapon("default", 1, 0, 0), new StandartJewelry("default", 1, 1, 1, 1, 1));
+            var puppet = new CombatantPuppet(new StandartArmor("default", 1 , 0, Enum.Specification.ItemType.ArmorChest), new StandartArmor("default", 1, 0, Enum.Specification.ItemType.ArmorHead), 
+                new StandartWeapon("default", 1, 0, 0), new StandartJewelry("default", 1, 1, 1, 1, 1));
             _player = Player.GetPlayer("Hero", new CombatantInventory(puppet), puppet, new CombatantStats(puppet));
 
             _npcList = new List<INpc>();
@@ -25,8 +26,6 @@ namespace Medieval_Knight_WinForms.Model
             _combatantList.Add(_player);
         }
 
-        //Поскольку, все сетеры "protected", кроме цены предмета, и нельзя изменить состояние Игрока, кроме как определенных методов, то
-        //Следовательно инкапсуляция не нарушается
         public static Player Player { get => _player; }
 
         public static List<string> CombatantNamesList { get => (from combatant in _combatantList select combatant.Name).ToList(); }
@@ -52,7 +51,8 @@ namespace Medieval_Knight_WinForms.Model
             //Создает нового врага, если не существует врага с таким же именем
             if (!_combatantList.Contains(_combatantList.Find(enemy => enemy.Name == enemyName)))
             {
-                var enemyPuppet = new CombatantPuppet(new StandartArmor("default", 1, 0, Enum.Specification.ItemType.ArmorChest), new StandartArmor("default", 1, 0, Enum.Specification.ItemType.ArmorHead), new StandartWeapon("default", 1, 0, 0), new StandartJewelry("default", 1, 1, 1, 1, 1));
+                var enemyPuppet = new CombatantPuppet(new StandartArmor("default", 1, 0, Enum.Specification.ItemType.ArmorChest), new StandartArmor("default", 1, 0, Enum.Specification.ItemType.ArmorHead), 
+                    new StandartWeapon("default", 1, 0, 0), new StandartJewelry("default", 1, 1, 1, 1, 1));
                 _combatantList.Add(new Enemy(enemyName, new CombatantInventory(enemyPuppet), enemyPuppet, new CombatantStats(enemyPuppet)));
                 _combatantList[^1].Died += eventHandlerDie;
             }

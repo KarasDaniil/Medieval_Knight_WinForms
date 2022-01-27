@@ -5,7 +5,6 @@ namespace Medieval_Knight_WinForms.Model.Item
     {
         public StandartArmor(string name, decimal cost, int armor, Specification.ItemType itemType) : base(name, cost, itemType, armor)
         {
-
         }
         //private bool _defendState = false;
 
