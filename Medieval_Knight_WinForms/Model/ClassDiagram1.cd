@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Medieval_Knight_WinForms.Model.Enum.Specification">
-    <Position X="18.75" Y="0.75" Width="1.5" />
+    <Position X="17.75" Y="0.5" Width="2" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -111,12 +111,13 @@
   <Class Name="Medieval_Knight_WinForms.Model.Stats.CombatantStats" Collapsed="true">
     <Position X="9.75" Y="9.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <HashCode>AAAAggAAAAAAAQEQAIQgEUIQQLAAAgABAQAwEgAAAAA=</HashCode>
       <FileName>Model\Stats\CombatantStats.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Medieval_Knight_WinForms.Model.MyDataGridViewExtension" Collapsed="true">
-    <Position X="20.25" Y="3.5" Width="1.5" />
+  <Class Name="Medieval_Knight_WinForms.Model.MyDataGridViewExtension">
+    <Position X="20.5" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAACAAAAAAA=</HashCode>
       <FileName>Model\MyDataGridViewExtension.cs</FileName>
@@ -125,7 +126,7 @@
   <Class Name="Medieval_Knight_WinForms.Model.Character.AbstractCombatant" Collapsed="true">
     <Position X="11" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <HashCode>BBAAAAAAAAAAAAAAQAAAAAAAAIAAAAQAQAQQAAAEAAA=</HashCode>
       <FileName>Model\Character\AbstractCombatant.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -165,6 +166,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAEA=</HashCode>
       <FileName>Model\Character\ShopKeeper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medieval_Knight_WinForms.Model.GameContoller">
+    <Position X="17.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAIAABAAAAACCAAAIAEAAgAAAAAEQAIAAA=</HashCode>
+      <FileName>Model\GameContoller.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="Medieval_Knight_WinForms.Model.Inventory.ICombatantInventory" Collapsed="true">
@@ -245,28 +253,28 @@
     </TypeIdentifier>
   </Interface>
   <Delegate Name="Medieval_Knight_WinForms.Model.Character.DieDelegate" Collapsed="true">
-    <Position X="22" Y="5.75" Width="1.5" />
+    <Position X="20.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Character\ICharacter.cs</FileName>
     </TypeIdentifier>
   </Delegate>
   <Delegate Name="Medieval_Knight_WinForms.Model.Character.AttackComplete" Collapsed="true">
-    <Position X="20.25" Y="5.75" Width="1.5" />
+    <Position X="20.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Character\ICombatant.cs</FileName>
     </TypeIdentifier>
   </Delegate>
   <Delegate Name="Medieval_Knight_WinForms.Model.Character.StatsChange" Collapsed="true">
-    <Position X="23.75" Y="5.75" Width="1.5" />
+    <Position X="20.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Character\ICombatant.cs</FileName>
     </TypeIdentifier>
   </Delegate>
   <Delegate Name="Medieval_Knight_WinForms.Model.Character.TradeDelegate" Collapsed="true">
-    <Position X="20.25" Y="6.5" Width="1.5" />
+    <Position X="20.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Character\INpc.cs</FileName>
