@@ -15,6 +15,7 @@ namespace Medieval_Knight_WinForms.Model.Item
             ItemType = itemType;
             IsЕquipped = false;
         }
+        //эти методы независимо отличаются у наследников, нет смысла в реализации по умолчанию.
         public abstract void Equip(ICombatantPuppet puppet);
 
         public abstract void Unequip(ICombatantPuppet puppet);

@@ -16,6 +16,7 @@ namespace Medieval_Knight_WinForms.View
         {
             if (e.ColumnIndex == 0 && e.RowIndex != -1)
             {
+                //выбор одеть/снять в зависимости от флага екипировки в таблице
                 if (!(bool)DGV_Inventory.Rows[e.RowIndex].Cells[0].Value)
                     GameContoller.Player.EquipItem(e.RowIndex);
                 else

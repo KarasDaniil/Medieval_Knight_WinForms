@@ -16,6 +16,7 @@ namespace Medieval_Knight_WinForms.Model.Stats
         private double _defenceJewelryMult;
         private double _damageJewelryMult;
 
+        //Get этих свойст позволяет удобно манипулировать(и составлять) итоговыми характиристиками
         public virtual int MaxHP
         {
             get
@@ -67,6 +68,7 @@ namespace Medieval_Knight_WinForms.Model.Stats
             }
         }
 
+        //это нужно чтобы не нужно было каждый раз передавать куклу в UpdateItemsStats
         public virtual ICombatantPuppet AttachedPuppet { get; }
 
         public CombatantStats(ICombatantPuppet attachedPuppet)
@@ -113,7 +115,7 @@ namespace Medieval_Knight_WinForms.Model.Stats
             _damageItemBonus = 0;
         }
 
-        public virtual void UpdateItemsStats()
+        public virtual void UpdateItemsStats()//метод обновляет статы в соответсвии с куклой
         {
             _attackItemBonus = AttachedPuppet.Weapon.WeaponAtack;
             _damageItemBonus = AttachedPuppet.Weapon.WeaponDamage;

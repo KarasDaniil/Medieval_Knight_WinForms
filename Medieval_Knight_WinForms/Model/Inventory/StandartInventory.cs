@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace Medieval_Knight_WinForms.Model.Inventory
 {
-    class StandartInventory : IInventory
+    class StandartInventory : IInventory //Стандартный инвентарь, для всех персонажей. Умеет только хранить предметы и золото
     {
         public virtual decimal Gold { get; protected set; }
         public virtual List<IItem> ItemsList { get; protected set; }

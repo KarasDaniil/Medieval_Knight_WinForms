@@ -6,6 +6,6 @@ namespace Medieval_Knight_WinForms.Model.Character
     {
         void SellOwnItem(ICharacter customer, params IItem[] selledItem);
         void BuyOtherItems(ICharacter customer, params IItem[] boughtItem);
-        TradeDelegate TradeComplete { get; set; }//{ add => TradeComplete += value; remove => TradeComplete -= value; }
+        TradeDelegate TradeComplete { get; set; }
     }
 }

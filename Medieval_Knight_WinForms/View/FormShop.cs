@@ -14,6 +14,7 @@ namespace Medieval_Knight_WinForms.View
         public FormShop()
         {
             InitializeComponent();
+            //чтобы явно открывать того же торговца
             _defaultShopName = "Stiven";
             GameContoller.CreateShopKeeper(_defaultShopName, null);
             //подписка на событие на события завршения торговли, чтобы обновить таблицы и золото
@@ -70,8 +71,10 @@ namespace Medieval_Knight_WinForms.View
 
         private void SetGoldNettoLabels()//Обработка изменения золота
         {
+            //установка текущего значения
             label_ShopCurrentGoldNum.Text = $"{GameContoller.GetNpc(_defaultShopName).Inventory.Gold}";
             label_YourCurrentGoldNum.Text = $"{GameContoller.Player.Inventory.Gold}";
+            //перебор и сумма цен отмеченых предметов
             decimal ShopItemGoldSum = 0;
             foreach (DataGridViewRow row in DGV_ShopInventory.Rows)
             {
@@ -89,6 +92,7 @@ namespace Medieval_Knight_WinForms.View
                     CustomerItemGoldSum += ((IItem)row.DataBoundItem).ItemCost;
                 }
             }
+            //установка разници торговли
             label_ShopCurrentGoldNetto.Text = $"{ShopItemGoldSum - CustomerItemGoldSum}";
             label_YourCurrentGoldNetto.Text = $"{CustomerItemGoldSum - ShopItemGoldSum}";
         }
@@ -97,7 +101,8 @@ namespace Medieval_Knight_WinForms.View
         {
             if (cell.ColumnIndex == 0 && cell.RowIndex != -1)
             {
-                //нужно чтобы с первого клика срабатывало переключение галки 
+                //вручную меняю чекБокс
+                //это нужно чтобы с первого клика срабатывало переключение чекБокса 
                 //Без этого: сначала вызывается это события, и только ПОЗЖЕ меняется значание чекБокса, то-есть считает измения золота с задержкой в 1 клик 
                 ((DataGridViewCheckBoxCell)DGV_PlayerInventory.Rows[cell.RowIndex].Cells[cell.ColumnIndex]).Value = 
                     !Convert.ToBoolean(((DataGridViewCheckBoxCell)DGV_PlayerInventory.Rows[cell.RowIndex].Cells[cell.ColumnIndex]).Value); 

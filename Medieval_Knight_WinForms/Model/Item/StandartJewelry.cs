@@ -13,7 +13,6 @@ namespace Medieval_Knight_WinForms.Model.Item
         public override void JewelSkillCast(ICombatant target)
         {
             target.Stats.CurrentHp += Convert.ToInt32(target.Stats.MaxHP * 0.25);
-            //jewelSkillCast?.Invoke(this, null);
         }
     }
 }

@@ -7,7 +7,7 @@ using Medieval_Knight_WinForms.Model.Stats;
 
 namespace Medieval_Knight_WinForms.Model.Factories
 {
-    class NullFactory : ICombatantFactory
+    class NullFactory : ICombatantFactory//на случай, если будет забыто создать фабрику для нового типа бойцов 
     {
         public ICombatant GetCombatant(string name, double powerMultipler)
         {

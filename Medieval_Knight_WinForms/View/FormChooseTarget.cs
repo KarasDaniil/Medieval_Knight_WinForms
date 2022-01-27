@@ -25,14 +25,16 @@ namespace Medieval_Knight_WinForms.View
             comboBox_Names.DataSource = _bindingSourceNames;
         }
 
-        private void Bt_CastJewelSkillOnTarget_Click(object sender, EventArgs e)
+        private void Bt_CastJewelSkillOnTarget_Click(object sender, EventArgs e)//кнопка каста
         {
+            //игрок использует способность бижутерии на выбраного в выпадающем списке врага
             GameContoller.CastSkill(GameContoller.Player.Name, (comboBox_Names.SelectedItem ?? string.Empty).ToString());
             Close();
         }
 
-        private void Bt_AttackTarget_Click(object sender, EventArgs e)
+        private void Bt_AttackTarget_Click(object sender, EventArgs e)//кнопка атаки
         {
+            //игрок атакует выбраного в выпадающем списке врага
             GameContoller.Attack(GameContoller.Player.Name, (comboBox_Names.SelectedItem ?? string.Empty).ToString());
             Close();
         }

@@ -7,7 +7,7 @@ using Medieval_Knight_WinForms.Model.Character;
 
 namespace Medieval_Knight_WinForms.Model.Factories
 {
-    interface ICombatantFactory
+    interface ICombatantFactory//описание фабрики создания врагов
     {
         ICombatant GetCombatant(string name, double powerMultipler);
     }

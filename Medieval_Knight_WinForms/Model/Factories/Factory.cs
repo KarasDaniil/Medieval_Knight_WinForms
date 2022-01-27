@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Medieval_Knight_WinForms.Model.Factories
 {
-    class Factory
+    class Factory//класс с единственным методом выбора нужной фабрики для конкретного бойца
     {
         public static ICombatantFactory GetFactory(Enum.Specification.CombatantType combatantType)
         {

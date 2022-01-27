@@ -1,9 +1,8 @@
 ﻿using Medieval_Knight_WinForms.Model.Character;
-using Medieval_Knight_WinForms.Model.Stats;
 
 namespace Medieval_Knight_WinForms.Model.Item
 {
-    class DamageJewelry : AbstractJewelry
+    class DamageJewelry : AbstractJewelry //Другой тип бижутерии, создан для демострации полиморфизма
     {
         public DamageJewelry(string name, decimal cost, double maxHpMult, double attackMult, double defenceMult, double damageMult)
             : base(name, cost, maxHpMult, attackMult, defenceMult, damageMult)
@@ -14,9 +13,6 @@ namespace Medieval_Knight_WinForms.Model.Item
         public override void JewelSkillCast(ICombatant skillTarget)
         {
             skillTarget.Stats.CurrentHp -= 15;
-            //if (skillTarget.Stats.CurrentHp == 0)
-            //    skillTarget.Die();
-            //jewelSkillCast?.Invoke(this, null);
         }
     }
 }

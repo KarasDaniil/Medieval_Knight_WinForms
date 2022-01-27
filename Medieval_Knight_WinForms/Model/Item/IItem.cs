@@ -10,7 +10,5 @@ namespace Medieval_Knight_WinForms.Model.Item
         decimal ItemCost { get; set; }
         void Equip(ICombatantPuppet puppet);
         void Unequip(ICombatantPuppet puppet);
-        //event EventHandler ItemEquiped;
-        //event EventHandler ItemUnequiped;
     }
 }

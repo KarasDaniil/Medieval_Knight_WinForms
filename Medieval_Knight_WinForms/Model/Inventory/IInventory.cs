@@ -6,7 +6,6 @@ namespace Medieval_Knight_WinForms.Model.Inventory
     {
         decimal Gold { get; }
         List<IItem> ItemsList { get; }
-
         void AddItem(params IItem[] addedItem);
         void RemoveItem(IItem removedItem);
         public void AddGold(decimal goldPlus);

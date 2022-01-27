@@ -6,8 +6,8 @@ namespace Medieval_Knight_WinForms.Model.Character
     delegate void StatsChange();
     interface ICombatant : ICharacter
     {
-        ICombatantStats Stats { get; }//protected set;
-        ICombatantPuppet Puppet { get; }
+        ICombatantStats Stats { get; } //контейнер х-ик
+        ICombatantPuppet Puppet { get; }//контейнер ссылок на екипированые предметы в инвентаре
         void Attack(ICombatant attackTarget);
         void CastJewelSkill(ICombatant skillTarget);
         StatsChange EquipmentChange { get; set; }

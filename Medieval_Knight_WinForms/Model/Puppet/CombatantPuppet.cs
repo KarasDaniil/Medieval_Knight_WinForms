@@ -2,7 +2,7 @@
 namespace Medieval_Knight_WinForms.Model.Puppet
 {
     class CombatantPuppet : ICombatantPuppet //"кукла персонажа" - удобный агрегатор екипированых предметов
-    {
+    {                                        //По сути хранит ссылки на екипированые предметы в инвентаре, чтобы потом их там не искать - удобно
         //Затея со значением по умолчанию, нужна чтобы в клиентском коде не проверять на null поля этого класса,
         //а шаблон "Null object" мне не подходил.
         private IArmor _defaultChest;
@@ -20,7 +20,8 @@ namespace Medieval_Knight_WinForms.Model.Puppet
             get => _currentChest; 
             set
             {
-                if(value != null && value.ItemType == Enum.Specification.ItemType.ArmorChest)//
+                //если пытаются присвоить null то одевается броня по умолчанию
+                if(value != null && value.ItemType == Enum.Specification.ItemType.ArmorChest)
                 {
                     _currentChest = value;
                 }
@@ -76,6 +77,7 @@ namespace Medieval_Knight_WinForms.Model.Puppet
             }
         }
 
+        //возможно задать броню по умолчанию
         public CombatantPuppet(IArmor defaultChest, IArmor defaultHead, IWeapon defaultWeapon, IJewelry defaultJewelry)
         {
             _defaultChest = defaultChest;

@@ -1,6 +1,5 @@
 ﻿using Medieval_Knight_WinForms.Model.Enum;
 using Medieval_Knight_WinForms.Model.Puppet;
-using System;
 namespace Medieval_Knight_WinForms.Model.Item
 {
     abstract class AbstractWeapon : AbstractItem, IWeapon
@@ -14,23 +13,17 @@ namespace Medieval_Knight_WinForms.Model.Item
             WeaponDamage = damage;
         }
 
-        //public event EventHandler ItemEquiped;
-        //public event EventHandler ItemUnequiped;
-
-        //public event EventHandler WeaponHited;
-
         public override void Equip(ICombatantPuppet puppet)
         {
             puppet.Weapon = this;
             IsЕquipped = true;
-            //ItemEquiped?.Invoke(this, null);
         }
+
         public override void Unequip(ICombatantPuppet puppet)
         {
             //null - безопасно, см. set в CombatantPuppet
             puppet.Weapon = null;
             IsЕquipped = false;
-            //ItemUnequiped?.Invoke(this, null);
         }
     }
 }

@@ -19,7 +19,6 @@ namespace Medieval_Knight_WinForms.Model
             try
             {
                 bindingSource.ResetBindings(true);
-                //dataGridView.Columns["IsЕquipped"].Visible = false;
             }
             catch (Exception ex)
             {
@@ -70,11 +69,10 @@ namespace Medieval_Knight_WinForms.Model
             var tmpStr = new StringBuilder();
             for (int i = 0; i < combatantStats.Count; i++)//проход по всем строкам и присвоение правильного(уникального) описания для каждого Стата
             {
-                //\nBase: {stats[i].Attack / (stats[i].AttachedPuppet.Jewelry == null ? 1 : stats[i].AttachedPuppet.Jewelry.AttackMult)}
-                //Присвоение имени комбатанта
+                //Присвоение имени бойца в столбец
                 dataGridView.Rows[i].Cells["CombatantName"].Value = names[i];
                 tmpStr.Clear();
-                //формирование строки для описания подробностей характеристики
+                //формирование строки для описания подробностей характеристики (громоздко, но зато удобно - один метод на все статы)
                 tmpStr.Append($"Value: {combatantStats[i].MaxHP}\nBase: {Convert.ToInt32(combatantStats[i].MaxHP / combatantStats[i].AttachedPuppet.Jewelry.MaxHpMult)}" +
                     $"\nJewel Name: {combatantStats[i].AttachedPuppet.Jewelry.ItemName}" +
                     $"\nJewel multipler: {combatantStats[i].AttachedPuppet.Jewelry.MaxHpMult}");
@@ -107,6 +105,7 @@ namespace Medieval_Knight_WinForms.Model
                     $"\nJewel multipler: {combatantStats[i].AttachedPuppet.Jewelry.DamageMult}");
                 dataGridView.Rows[i].Cells["DamageMax"].ToolTipText = tmpStr.ToString();
             }
+            //выключаю лишний столбец
             dataGridView.Columns["AttachedPuppet"].Visible = false;
             //ссужаю ширину столбика к границам заголовка столбика
             dataGridView.Columns["MaxHP"].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;

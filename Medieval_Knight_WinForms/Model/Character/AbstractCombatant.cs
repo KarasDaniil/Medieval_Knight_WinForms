@@ -4,7 +4,7 @@ using Medieval_Knight_WinForms.Model.Stats;
 using Medieval_Knight_WinForms.Model.Item;
 namespace Medieval_Knight_WinForms.Model.Character
 {
-    abstract class AbstractCombatant : Character, ICombatant
+    abstract class AbstractCombatant : Character, ICombatant //Нужен чтобы я лишний раз не описывал свойства и одинаковые методы екипировки
     {
         public virtual ICombatantPuppet Puppet { get; protected set; }
 

@@ -1,7 +1,6 @@
-﻿using Medieval_Knight_WinForms.Model.Enum;
+﻿using Medieval_Knight_WinForms.Model.Character;
+using Medieval_Knight_WinForms.Model.Enum;
 using Medieval_Knight_WinForms.Model.Puppet;
-using Medieval_Knight_WinForms.Model.Character;
-using System;
 namespace Medieval_Knight_WinForms.Model.Item
 {
     abstract class AbstractJewelry : AbstractItem, IJewelry
@@ -20,27 +19,19 @@ namespace Medieval_Knight_WinForms.Model.Item
             JewelSkillName = "None";
         }
 
-        //public event EventHandler ItemEquiped;
-        //public event EventHandler ItemUnequiped;
-
-        //public delegate void JewelSkillCast(object sender, EventArgs e);
-
-        //public event JewelSkillCast jewelSkillCast3;
-
+        //Для каждой бижутерии способность должна быть своя. 
         public abstract void JewelSkillCast(ICombatant target);
 
         public override void Equip(ICombatantPuppet puppet)
         {
             puppet.Jewelry = this;
             IsЕquipped = true;
-            //ItemEquiped?.Invoke(this, null);
         }
         public override void Unequip(ICombatantPuppet puppet)
         {
             //null - безопасно, см. set в CombatantPuppet
             puppet.Jewelry = null;
             IsЕquipped = false;
-            //ItemUnequiped?.Invoke(this, null);
         }
     }
 }

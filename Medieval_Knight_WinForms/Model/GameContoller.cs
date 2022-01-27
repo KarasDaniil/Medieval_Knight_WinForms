@@ -27,6 +27,7 @@ namespace Medieval_Knight_WinForms.Model
 
         public static Player Player { get => _player; }
 
+        //свойсва с удобным доступом, мгновенной выборкой нужного из колекции бойцов
         public static List<string> CombatantNamesList { get => (from combatant in _combatantList select combatant.Name).ToList(); }
         public static List<ICombatantStats> CombatantStatList { get => (from combatant in _combatantList select combatant.Stats).ToList(); }
 
@@ -51,6 +52,7 @@ namespace Medieval_Knight_WinForms.Model
             }
         }
 
+        //методы получения из колекций нпс и врага по имени 
         public static INpc GetNpc(string npcName)
         {
             return _npcList.Find(npc => npc.Name == npcName);
@@ -61,7 +63,7 @@ namespace Medieval_Knight_WinForms.Model
             return _combatantList.Find(enemy => enemy.Name == enemyName);
         }
 
-        public static void Attack(string attackerName, string defenderName)
+        public static void Attack(string attackerName, string defenderName)//метод описание атаки
         {
             //быстрые ссылки, чтобы выполняеть только два поиска  
             var attacker = _combatantList.Find(combatant => combatant.Name == attackerName);

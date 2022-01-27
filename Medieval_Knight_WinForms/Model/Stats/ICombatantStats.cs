@@ -10,7 +10,6 @@ namespace Medieval_Knight_WinForms.Model.Stats
         int DamageMin { get; }
         int DamageMax { get; }
         ICombatantPuppet AttachedPuppet { get; }
-        //void LevelUpStats(int maxHpLevelBonus, int attackLevelBonus, int defenceLevelBonus, int damageLevelBonus);
         void UpdateItemsStats();
     }
 }

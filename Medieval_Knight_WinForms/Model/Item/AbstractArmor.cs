@@ -1,6 +1,5 @@
 ﻿using Medieval_Knight_WinForms.Model.Enum;
 using Medieval_Knight_WinForms.Model.Puppet;
-using System;
 namespace Medieval_Knight_WinForms.Model.Item
 {
     abstract class AbstractArmor : AbstractItem, IArmor
@@ -18,15 +17,9 @@ namespace Medieval_Knight_WinForms.Model.Item
             ArmorScore = armor;
         }
 
-        //public event EventHandler ItemEquiped;
-        //public event EventHandler ItemUnequiped;
-
-        //public abstract void BeginDefendAction(ICombatantStats stats);
-        //public abstract void EndDefendAction(ICombatantStats stats);
-        //public event EventHandler ArmorWasHit;
-
         public override void Equip(ICombatantPuppet puppet)
         {
+            //puppet - кукла персонажа - удобный агрегатор екипированых предметов
             if (ItemType == Specification.ItemType.ArmorChest)
                 puppet.Chest = this;
             else if (ItemType == Specification.ItemType.ArmorHead)
@@ -45,7 +38,6 @@ namespace Medieval_Knight_WinForms.Model.Item
                 puppet.Head = null;
 
             IsЕquipped = false;
-            //ItemUnequiped?.Invoke(this, null);
         }
     }
 }

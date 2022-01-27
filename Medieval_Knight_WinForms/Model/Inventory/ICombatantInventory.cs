@@ -5,6 +5,5 @@ namespace Medieval_Knight_WinForms.Model.Inventory
     {
         void EquipItem(int itemIndex);
         void UnequipItem(int itemIndex);
-        //void AttachNewPuppet();
     }
 }

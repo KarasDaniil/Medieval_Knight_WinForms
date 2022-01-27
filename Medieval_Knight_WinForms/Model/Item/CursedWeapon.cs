@@ -1,7 +1,7 @@
 ﻿using Medieval_Knight_WinForms.Model.Puppet;
 namespace Medieval_Knight_WinForms.Model.Item
 {
-    class CursedWeapon : AbstractWeapon
+    class CursedWeapon : AbstractWeapon //Другой тип оружия, создан для демонстрации полиморфизма
     {
         public CursedWeapon(string name, decimal cost, int atack, int damage) : base(name, cost, atack, damage)
         {
