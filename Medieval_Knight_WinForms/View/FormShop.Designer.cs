@@ -46,6 +46,7 @@ namespace Medieval_Knight_WinForms.View
             this.label_Info = new System.Windows.Forms.Label();
             this.Bt_PlusGold = new System.Windows.Forms.Button();
             this.Bt_MinusGold = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_PlayerInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_ShopInventory)).BeginInit();
             this.SuspendLayout();
@@ -86,7 +87,7 @@ namespace Medieval_Knight_WinForms.View
             this.DGV_ShopInventory.ReadOnly = true;
             this.DGV_ShopInventory.RowHeadersWidth = 51;
             this.DGV_ShopInventory.RowTemplate.Height = 29;
-            this.DGV_ShopInventory.Size = new System.Drawing.Size(646, 327);
+            this.DGV_ShopInventory.Size = new System.Drawing.Size(662, 327);
             this.DGV_ShopInventory.TabIndex = 1;
             this.DGV_ShopInventory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_ShopInventory_CellContentClick);
             // 
@@ -215,11 +216,21 @@ namespace Medieval_Knight_WinForms.View
             this.Bt_MinusGold.UseVisualStyleBackColor = true;
             this.Bt_MinusGold.Click += new System.EventHandler(this.Bt_MinusGold_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(114, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(338, 20);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "To view items stats hover mouse over their name! ";
+            // 
             // FormShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1337, 448);
+            this.ClientSize = new System.Drawing.Size(1357, 448);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Bt_MinusGold);
             this.Controls.Add(this.Bt_PlusGold);
             this.Controls.Add(this.label_Info);
@@ -265,5 +276,6 @@ namespace Medieval_Knight_WinForms.View
         private System.Windows.Forms.Label label_Info;
         private System.Windows.Forms.Button Bt_PlusGold;
         private System.Windows.Forms.Button Bt_MinusGold;
+        private System.Windows.Forms.Label label1;
     }
 }

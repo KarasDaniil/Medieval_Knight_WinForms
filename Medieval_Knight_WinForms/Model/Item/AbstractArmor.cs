@@ -38,6 +38,7 @@ namespace Medieval_Knight_WinForms.Model.Item
 
         public override void Unequip(ICombatantPuppet puppet)
         {
+            //null - безопасно, см. set в CombatantPuppet
             if (ItemType == Specification.ItemType.ArmorChest)
                 puppet.Chest = null;
             else if (ItemType == Specification.ItemType.ArmorHead)

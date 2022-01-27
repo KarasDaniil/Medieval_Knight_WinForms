@@ -40,11 +40,6 @@ namespace Medieval_Knight_WinForms.Model
             }
         }
 
-        public static INpc GetNpc(string npcName)
-        {
-            return _npcList.Find(npc => npc.Name == npcName);
-        }
-
         public static void CreateEnemy(string enemyName, double powerMultipler, DieDelegate eventHandlerDie)
         {
             //Создает нового врага, если не существует врага с таким же именем
@@ -54,6 +49,11 @@ namespace Medieval_Knight_WinForms.Model
                 _combatantList.Add(_factory.GetCombatant(enemyName, powerMultipler));
                 _combatantList[^1].Died += eventHandlerDie;
             }
+        }
+
+        public static INpc GetNpc(string npcName)
+        {
+            return _npcList.Find(npc => npc.Name == npcName);
         }
 
         public static ICombatant GetEnemy(string enemyName)

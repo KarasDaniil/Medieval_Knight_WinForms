@@ -23,7 +23,7 @@ namespace Medieval_Knight_WinForms.Model.Factories
             var playerPuppet = new CombatantPuppet(defaultChest, defaultHead, defaultWeapon, defaultJewelry);
 
             var playerInventory = new CombatantInventory(playerPuppet);
-            playerInventory.AddItem(defaultChest, defaultHead, defaultWeapon, defaultJewelry);
+            //playerInventory.AddItem(defaultChest, defaultHead, defaultWeapon, defaultJewelry);
             playerInventory.AddGold(5000);
             var playerStats = new CombatantStats(playerPuppet, 150, 10, 10, 5, 12);
             playerStats.UpdateItemsStats();

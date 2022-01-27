@@ -37,6 +37,7 @@ namespace Medieval_Knight_WinForms.Model.Item
         }
         public override void Unequip(ICombatantPuppet puppet)
         {
+            //null - безопасно, см. set в CombatantPuppet
             puppet.Jewelry = null;
             IsЕquipped = false;
             //ItemUnequiped?.Invoke(this, null);
