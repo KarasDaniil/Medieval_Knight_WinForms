@@ -1,17 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Medieval_Knight_WinForms.Model.Character.AbstractCombatant" Collapsed="true">
+    <Position X="12.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BBAAAAAAAAAAAAAAQAAAAAAAAIAAAAQAQAQQAAAEAAA=</HashCode>
+      <FileName>Model\Character\AbstractCombatant.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Medieval_Knight_WinForms.Model.Character.AbstractNpc" Collapsed="true">
+    <Position X="16.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIgAAAAAAA=</HashCode>
+      <FileName>Model\Character\AbstractNpc.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Medieval_Knight_WinForms.Model.Character.Character" Collapsed="true">
+    <Position X="14" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAQAAAAAAAAAAAAAAgIAAAA=</HashCode>
+      <FileName>Model\Character\Character.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Medieval_Knight_WinForms.Model.Character.Enemy" Collapsed="true">
+    <Position X="12.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Model\Character\Enemy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Medieval_Knight_WinForms.Model.Character.Player" Collapsed="true">
+    <Position X="14.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Model\Character\Player.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Medieval_Knight_WinForms.Model.Character.ShopKeeper" Collapsed="true">
+    <Position X="16.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAEA=</HashCode>
+      <FileName>Model\Character\ShopKeeper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Enum.Specification">
-    <Position X="17.75" Y="0.5" Width="2" />
+    <Position X="19.25" Y="0.5" Width="2" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <NestedTypes>
       <Enum Name="Medieval_Knight_WinForms.Model.Enum.Specification.ItemType" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Model\Enum\Specification.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-      <Enum Name="Medieval_Knight_WinForms.Model.Enum.Specification.CharacterType" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>Model\Enum\Specification.cs</NewMemberFileName>
         </TypeIdentifier>
@@ -27,8 +69,39 @@
       <FileName>Model\Enum\Specification.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Medieval_Knight_WinForms.Model.Factories.EnemyFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Model\Factories\EnemyFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Medieval_Knight_WinForms.Model.Factories.Factory" Collapsed="true">
+    <Position X="22.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Factories\Factory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Medieval_Knight_WinForms.Model.Factories.PlayerFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Model\Factories\PlayerFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Medieval_Knight_WinForms.Model.Factories.NullFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Model\Factories\NullFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Inventory.CombatantInventory" Collapsed="true">
-    <Position X="3.5" Y="9.75" Width="2" />
+    <Position X="10.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEgAA=</HashCode>
       <FileName>Model\Inventory\CombatantInventory.cs</FileName>
@@ -36,7 +109,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Inventory.StandartInventory" Collapsed="true">
-    <Position X="1" Y="9.75" Width="1.5" />
+    <Position X="7.75" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIIAAAAAAAAEAAAAAAAAAAgAAAAAAEAAAAAAAAAAE=</HashCode>
       <FileName>Model\Inventory\StandartInventory.cs</FileName>
@@ -44,7 +117,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Item.AbstractArmor" Collapsed="true">
-    <Position X="4.75" Y="4.25" Width="1.5" />
+    <Position X="2" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAgAAAAAIAAAAA=</HashCode>
       <FileName>Model\Item\AbstractArmor.cs</FileName>
@@ -52,7 +125,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Item.AbstractItem" Collapsed="true">
-    <Position X="4.75" Y="3" Width="1.5" />
+    <Position X="5.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAABAYAAAgA=</HashCode>
       <FileName>Model\Item\AbstractItem.cs</FileName>
@@ -60,7 +133,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Item.AbstractJewelry" Collapsed="true">
-    <Position X="6.75" Y="4.25" Width="1.5" />
+    <Position X="4" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAABAAAAQAAAAAIAAAAAAAAggAEAAIAACAA=</HashCode>
       <FileName>Model\Item\AbstractJewelry.cs</FileName>
@@ -68,7 +141,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Item.AbstractWeapon" Collapsed="true">
-    <Position X="1" Y="4.25" Width="1.5" />
+    <Position X="7.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgABABAIAAAAA=</HashCode>
       <FileName>Model\Item\AbstractWeapon.cs</FileName>
@@ -76,217 +149,177 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Item.CursedWeapon" Collapsed="true">
-    <Position X="2.75" Y="5.75" Width="1.5" />
+    <Position X="7.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAIAAAAA=</HashCode>
       <FileName>Model\Item\CursedWeapon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Item.DamageJewelry" Collapsed="true">
-    <Position X="8.5" Y="5.75" Width="1.5" />
+    <Position X="4" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>Model\Item\DamageJewelry.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Item.StandartArmor" Collapsed="true">
-    <Position X="4.75" Y="5.75" Width="1.5" />
+    <Position X="2" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Item\StandartArmor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Item.StandartJewelry" Collapsed="true">
-    <Position X="6.75" Y="5.75" Width="1.5" />
+    <Position X="5.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>Model\Item\StandartJewelry.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Item.StandartWeapon" Collapsed="true">
-    <Position X="1" Y="5.75" Width="1.5" />
+    <Position X="9.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Item\StandartWeapon.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Medieval_Knight_WinForms.Model.Puppet.CombatantPuppet" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="7" Y="9.75" Width="1.75" />
+  <Class Name="Medieval_Knight_WinForms.Model.Puppet.CombatantPuppet" Collapsed="true">
+    <Position X="2" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAEAQIAAAAAAgAAAAoAAAAgAAECAAQQgAAA=</HashCode>
       <FileName>Model\Puppet\CombatantPuppet.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Medieval_Knight_WinForms.Model.Stats.CombatantStats" Collapsed="true">
-    <Position X="9.75" Y="9.75" Width="1.5" />
+    <Position X="4.25" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAggAAAAAAAQEQAIQgEUIQQLAAAgABAQAwEgAAAAA=</HashCode>
       <FileName>Model\Stats\CombatantStats.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Medieval_Knight_WinForms.Model.MyDataGridViewExtension">
-    <Position X="20.5" Y="0.5" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAACAAAAAAA=</HashCode>
-      <FileName>Model\MyDataGridViewExtension.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Medieval_Knight_WinForms.Model.Character.AbstractCombatant" Collapsed="true">
-    <Position X="11" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>BBAAAAAAAAAAAAAAQAAAAAAAAIAAAAQAQAQQAAAEAAA=</HashCode>
-      <FileName>Model\Character\AbstractCombatant.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Medieval_Knight_WinForms.Model.Character.AbstractNpc" Collapsed="true">
-    <Position X="15.5" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIgAAAAAAA=</HashCode>
-      <FileName>Model\Character\AbstractNpc.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Medieval_Knight_WinForms.Model.Character.Character" Collapsed="true">
-    <Position X="13.25" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAAAQAAAAAAAAAAAAAAgIAAAA=</HashCode>
-      <FileName>Model\Character\Character.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Medieval_Knight_WinForms.Model.Character.Enemy" Collapsed="true">
-    <Position X="13" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAQAAAAAAAA=</HashCode>
-      <FileName>Model\Character\Enemy.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Medieval_Knight_WinForms.Model.Character.Player" Collapsed="true">
-    <Position X="11" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAQAAAAAAAA=</HashCode>
-      <FileName>Model\Character\Player.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Medieval_Knight_WinForms.Model.Character.ShopKeeper" Collapsed="true">
-    <Position X="15.5" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAEA=</HashCode>
-      <FileName>Model\Character\ShopKeeper.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Medieval_Knight_WinForms.Model.GameContoller">
-    <Position X="17.75" Y="2.5" Width="2" />
+    <Position X="19.25" Y="3" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAACACAIAABAAAAACCAAAIAEAAgAAAACEQAIAAA=</HashCode>
       <FileName>Model\GameContoller.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="Medieval_Knight_WinForms.Model.Inventory.ICombatantInventory" Collapsed="true">
-    <Position X="3.5" Y="8.5" Width="2" />
+  <Class Name="Medieval_Knight_WinForms.Model.MyDataGridViewExtension" Collapsed="true">
+    <Position X="21.75" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
-      <FileName>Model\Inventory\ICombatantInventory.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAACAAAAAAA=</HashCode>
+      <FileName>Model\MyDataGridViewExtension.cs</FileName>
     </TypeIdentifier>
-  </Interface>
-  <Interface Name="Medieval_Knight_WinForms.Model.Inventory.IInventory" Collapsed="true">
-    <Position X="1" Y="8.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAIIAAAAAAAAAAAAAAAAAAAgAAAAAAEAAAAAAAAAAE=</HashCode>
-      <FileName>Model\Inventory\IInventory.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="Medieval_Knight_WinForms.Model.Item.IArmor" Collapsed="true">
-    <Position X="4.75" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\Item\IArmor.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="Medieval_Knight_WinForms.Model.Item.IItem" Collapsed="true">
-    <Position X="4.75" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAABAYAAAgA=</HashCode>
-      <FileName>Model\Item\IItem.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="Medieval_Knight_WinForms.Model.Item.IJewelry" Collapsed="true">
-    <Position X="6.75" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAABAAAAQAAAAAIAAAAAAAAAgAEAAAAACAA=</HashCode>
-      <FileName>Model\Item\IJewelry.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="Medieval_Knight_WinForms.Model.Item.IWeapon" Collapsed="true">
-    <Position X="1" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABABAAAAAAA=</HashCode>
-      <FileName>Model\Item\IWeapon.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="Medieval_Knight_WinForms.Model.Puppet.ICombatantPuppet" Collapsed="true">
-    <Position X="7" Y="8.5" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAQIAAAAAAAAAAAgAAAAgAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\Puppet\ICombatantPuppet.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="Medieval_Knight_WinForms.Model.Stats.ICombatantStats" Collapsed="true">
-    <Position X="9.75" Y="8.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAIAgEAIAQIAAAgAAAAAAAgAAAAA=</HashCode>
-      <FileName>Model\Stats\ICombatantStats.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
+  </Class>
   <Interface Name="Medieval_Knight_WinForms.Model.Character.ICharacter" Collapsed="true">
-    <Position X="13.25" Y="0.5" Width="1.5" />
+    <Position X="14" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAAAQAAAAAAAAAAAAAAgIAAAA=</HashCode>
       <FileName>Model\Character\ICharacter.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Medieval_Knight_WinForms.Model.Character.ICombatant" Collapsed="true">
-    <Position X="11" Y="1.75" Width="1.5" />
+    <Position X="12.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAAAAAAAQAAAAAAAAIAAAAQAQAQQAAAAAAA=</HashCode>
       <FileName>Model\Character\ICombatant.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Medieval_Knight_WinForms.Model.Character.INpc" Collapsed="true">
-    <Position X="15.5" Y="1.75" Width="1.5" />
+    <Position X="16.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIgAAAAAAA=</HashCode>
       <FileName>Model\Character\INpc.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="Medieval_Knight_WinForms.Model.Factories.ICombatantFactory" Collapsed="true">
+    <Position X="19.25" Y="8.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Model\Factories\ICombatantFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Medieval_Knight_WinForms.Model.Inventory.ICombatantInventory" Collapsed="true">
+    <Position X="10.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Model\Inventory\ICombatantInventory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Medieval_Knight_WinForms.Model.Inventory.IInventory" Collapsed="true">
+    <Position X="7.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIIAAAAAAAAAAAAAAAAAAAgAAAAAAEAAAAAAAAAAE=</HashCode>
+      <FileName>Model\Inventory\IInventory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Medieval_Knight_WinForms.Model.Item.IArmor" Collapsed="true">
+    <Position X="2" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Item\IArmor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Medieval_Knight_WinForms.Model.Item.IItem" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAABAYAAAgA=</HashCode>
+      <FileName>Model\Item\IItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Medieval_Knight_WinForms.Model.Item.IJewelry" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAQAAAAAIAAAAAAAAAgAEAAAAACAA=</HashCode>
+      <FileName>Model\Item\IJewelry.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Medieval_Knight_WinForms.Model.Item.IWeapon" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABABAAAAAAA=</HashCode>
+      <FileName>Model\Item\IWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Medieval_Knight_WinForms.Model.Puppet.ICombatantPuppet" Collapsed="true">
+    <Position X="2" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQIAAAAAAAAAAAgAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Puppet\ICombatantPuppet.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Medieval_Knight_WinForms.Model.Stats.ICombatantStats" Collapsed="true">
+    <Position X="4.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAgEAIAQIAAAgAAAAAAAgAAAAA=</HashCode>
+      <FileName>Model\Stats\ICombatantStats.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Delegate Name="Medieval_Knight_WinForms.Model.Character.DieDelegate" Collapsed="true">
-    <Position X="20.5" Y="3.25" Width="1.5" />
+    <Position X="21.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Character\ICharacter.cs</FileName>
     </TypeIdentifier>
   </Delegate>
   <Delegate Name="Medieval_Knight_WinForms.Model.Character.AttackComplete" Collapsed="true">
-    <Position X="20.5" Y="4.75" Width="1.5" />
+    <Position X="21.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Character\ICombatant.cs</FileName>
     </TypeIdentifier>
   </Delegate>
   <Delegate Name="Medieval_Knight_WinForms.Model.Character.StatsChange" Collapsed="true">
-    <Position X="20.5" Y="2.5" Width="1.5" />
+    <Position X="21.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Character\ICombatant.cs</FileName>
     </TypeIdentifier>
   </Delegate>
   <Delegate Name="Medieval_Knight_WinForms.Model.Character.TradeDelegate" Collapsed="true">
-    <Position X="20.5" Y="4" Width="1.5" />
+    <Position X="21.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Character\INpc.cs</FileName>
